@@ -19,7 +19,8 @@ public class BasicProgrammatic {
   public static void main(String[] args) {
     LOGGER.info("Creating cache manager programmatically");
     try (CacheManager cacheManager = newCacheManagerBuilder()
-            .with(CacheManagerBuilder.persistence(System.getProperty("user.dir") + File.separator + "myData"))
+            .with(CacheManagerBuilder.persistence(System.getProperty("user.dir")
+                    + File.separator + "myData"))
       .withCache("basicCache",
 //        newCacheConfigurationBuilder(Long.class, String.class, heap(1).offheap(1, MB)))
         newCacheConfigurationBuilder(Long.class, String.class, heap(1).disk(1, MB)))
