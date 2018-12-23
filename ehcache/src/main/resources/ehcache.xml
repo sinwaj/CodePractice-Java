@@ -5,9 +5,9 @@
   xmlns:ehcache='http://www.ehcache.org/v3'
   xsi:schemaLocation="http://www.ehcache.org/v3 http://www.ehcache.org/schema/ehcache-core-3.1.xsd">
 
-  <ehcache:cache alias="basicCache">
+  <ehcache:cache alias="defaultCache">
     <ehcache:key-type>java.lang.Long</ehcache:key-type>
-    <ehcache:value-type>java.lang.String</ehcache:value-type>
+    <ehcache:value-type>org.topcode.entity.User</ehcache:value-type>
     <ehcache:resources>
       <ehcache:heap unit="entries">100</ehcache:heap>
       <ehcache:offheap unit="MB">1</ehcache:offheap>
