@@ -18,7 +18,7 @@ public class UserCacheServiceTest {
 
         //when
         UserCacheService cacheService = new UserCacheService();
-        cacheService.put(user.getId(),user);
+        cacheService.put(user);
 
         User actualUser = cacheService.get(1L);
 

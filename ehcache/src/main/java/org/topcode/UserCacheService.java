@@ -2,6 +2,7 @@ package org.topcode;
 
 import org.ehcache.Cache;
 import org.ehcache.CacheManager;
+import org.ehcache.config.builders.CacheConfigurationBuilder;
 import org.ehcache.spi.loaderwriter.CacheWritingException;
 import org.topcode.entity.User;
 
@@ -22,6 +23,7 @@ public class UserCacheService {
     }
 
     private void init() {
+
         cacheManager = newCacheManagerBuilder()
                 .withCache(DEFAULT_CACHE,
                         newCacheConfigurationBuilder(Long.class, User.class, heap(100).offheap(1, MB)))
@@ -36,10 +38,11 @@ public class UserCacheService {
         return defaultCache.get(key);
     }
 
-    public boolean put(Long key ,User value) {
+    public boolean put(User value) {
         Cache<Long, User> defaultCache = cacheManager.getCache(DEFAULT_CACHE, Long.class, User.class);
         try {
-            defaultCache.put(key,value);
+
+            defaultCache.put(value.getId(),value);
         } catch (CacheWritingException ex){
             return false;
         }
