@@ -24,7 +24,8 @@ public class CacheServiceTest {
         User actualUser = cacheService.get(1L);
 
         //then
-        assertThat(user.getId(),is(actualUser.getId()));
+        assertThat(1L,is(actualUser.getId()));
+        assertThat("Tom",is(actualUser.getName()));
 
     }
 }
