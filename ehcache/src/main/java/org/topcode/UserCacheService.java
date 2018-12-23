@@ -3,7 +3,6 @@ package org.topcode;
 import org.ehcache.Cache;
 import org.ehcache.CacheManager;
 import org.ehcache.config.Configuration;
-import org.ehcache.config.builders.CacheConfigurationBuilder;
 import org.ehcache.config.builders.CacheManagerBuilder;
 import org.ehcache.spi.loaderwriter.CacheWritingException;
 import org.ehcache.xml.XmlConfiguration;
