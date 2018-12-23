@@ -1,4 +1,4 @@
-package org.topcode;
+package org.topcode.entity;
 
 import java.io.Serializable;
 

@@ -2,12 +2,13 @@ package org.topcode;
 
 
 import org.junit.Test;
+import org.topcode.entity.User;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
 
 
-public class CacheServiceTest {
+public class UserCacheServiceTest {
 
     @Test
     public void testPutUser() throws Exception {
@@ -16,7 +17,7 @@ public class CacheServiceTest {
                 .Age(18).build();
 
         //when
-        CacheService cacheService = new CacheService();
+        UserCacheService cacheService = new UserCacheService();
         cacheService.put(user.getId(),user);
 
         User actualUser = cacheService.get(1L);

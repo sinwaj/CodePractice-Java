@@ -3,6 +3,7 @@ package org.topcode;
 import org.ehcache.Cache;
 import org.ehcache.CacheManager;
 import org.ehcache.spi.loaderwriter.CacheWritingException;
+import org.topcode.entity.User;
 
 import static org.ehcache.config.builders.CacheConfigurationBuilder.newCacheConfigurationBuilder;
 import static org.ehcache.config.builders.CacheManagerBuilder.newCacheManagerBuilder;
@@ -12,11 +13,11 @@ import static org.ehcache.config.units.MemoryUnit.MB;
 /**
  * Created by sinwaj on 2018/12/22.
  */
-public class CacheService {
+public class UserCacheService {
     private CacheManager cacheManager;
     private final static String DEFAULT_CACHE = "defaultCache";
 
-    public CacheService() {
+    public UserCacheService() {
         init();
     }
 
