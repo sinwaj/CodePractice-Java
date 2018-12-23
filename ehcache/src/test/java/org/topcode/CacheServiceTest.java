@@ -6,9 +6,7 @@ import org.junit.Test;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
 
-/**
- * Created by 10018761 on 16-9-24.
- */
+
 public class CacheServiceTest {
 
     @Test
