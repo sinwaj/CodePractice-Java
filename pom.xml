@@ -56,7 +56,7 @@
 
   <modules>
     <module>ehcache</module>
-    <!--<module>clustered</module>-->
+    <module>concurrence</module>
     <!--<module>fullstack</module>-->
     <!--<module>jsr107</module>-->
     <!--<module>scale-continuum</module>-->
