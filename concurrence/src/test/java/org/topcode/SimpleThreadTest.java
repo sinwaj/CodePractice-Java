@@ -15,6 +15,6 @@ public class SimpleThreadTest {
 
         Thread.sleep(1000);
 
-        assert simpleThread.IsFininshed();
+        assert simpleThread.isFininshed();
     }
 }

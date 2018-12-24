@@ -6,11 +6,11 @@ package org.topcode.thread;
 public class SimpleThread extends Thread{
     private boolean finished = false;
     public void run() {
-        System.out.println("I am running!");
+        System.out.println("I am a simpleThread!");
         finished = true;
     }
 
-    public boolean IsFininshed() {
+    public boolean isFininshed() {
         return finished;
     }
 }
