@@ -57,7 +57,7 @@
   <modules>
     <module>ehcache</module>
     <module>concurrence</module>
-    <!--<module>fullstack</module>-->
+    <module>stream</module>
     <!--<module>jsr107</module>-->
     <!--<module>scale-continuum</module>-->
     <!--<module>caching-still-matters</module>-->
