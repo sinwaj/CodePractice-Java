@@ -1,7 +1,7 @@
 package org.topcode.stream;
 
 import org.junit.Test;
-import org.topcode.thread.Streamer;
+
 
 import java.util.Arrays;
 import java.util.List;
@@ -28,4 +28,40 @@ public class StreamerTest {
         assertThat(actualWords,is(expectWords));
         System.out.println(actualWords);
     }
+
+    @Test
+    public void testFilter() {
+        String input = Streamer.CONTENT;
+        List<String> expectWords = Arrays.asList(new String[]{
+                "Hello", "World", "There"});
+
+        //when
+        Streamer streamer = new Streamer();
+        List<String> datas = streamer.split(input);
+        List<String> actualWords = streamer.filter(datas,5);
+
+
+        //then
+        assertThat(actualWords,is(expectWords));
+        System.out.println(actualWords);
+    }
+
+    @Test
+    public void testMap() {
+        String input = Streamer.CONTENT;
+        List<String> expectWords = Arrays.asList(new String[]{
+                "hello", "world", "there", "is", "a", "cat", "in", "the", "zoo"});
+
+
+        //when
+        Streamer streamer = new Streamer();
+        List<String> datas = streamer.split(input);
+        List<String> actualWords = streamer.toLow(datas);
+
+
+        //then
+        assertThat(actualWords,is(expectWords));
+        System.out.println(actualWords);
+    }
 }
+
